@@ -1,0 +1,54 @@
+<footer class="bg-bg-secondary dark:bg-bg-secondary text-text-primary py-12 border-t border-border-primary">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row justify-between items-start gap-8">
+      <div class="mb-4 md:mb-0">
+        <a href="/#home" class="text-xl font-bold text-text-primary font-heading">{{ .Site.Params.firstName }} {{ .Site.Params.lastName }} </a>
+        <p class="text-text-secondary dark:text-text-muted mt-1">{{ .Site.Params.tagline }}</p>
+        <p class="text-text-secondary dark:text-text-muted mt-2">{{ .Site.Params.hero_description }}</p>
+        <p class="text-text-secondary dark:text-text-muted mt-1">
+          <i class="fas fa-map-marker-alt mr-2"></i>{{ .Site.Params.hero_location }}
+        </p>
+        <a href="mailto:{{ .Site.Params.email }}" class="text-text-secondary dark:text-text-muted text-primary dark:text-primary-light mt-1 inline-block">
+          <i class="fas fa-envelope mr-2"></i>{{ .Site.Params.email }}
+        </a>
+      </div>
+      <div class="flex flex-col items-start lg:items-end gap-5 w-full lg:w-auto">
+        <div class="flex flex-wrap gap-2 justify-end">
+          {{ range .Site.Params.collab_tags }}
+          {{ $isPriority := or (eq . "Urgent") (eq . "Priority") (eq . "Leadership") (eq . "Management") }}
+          <span class="{{ if $isPriority }}bg-third text-text-primary{{ else }}bg-bg-tertiary dark:bg-bg-tertiary text-text-primary{{ end }} px-3 py-1 rounded-full text-sm font-semibold shadow-md">{{ . }}</span>
+          {{ end }}
+        </div>
+
+        {{ if .Site.Params.visitor_counter_script }}
+        <div class="visitor-stats-card bg-bg dark:bg-bg rounded-2xl shadow-lg border border-border-primary dark:border-border-primary p-4 w-full max-w-sm">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-base font-semibold text-text-primary dark:text-text-primary">Visitor Stats</h3>
+            <i class="fas fa-chart-line text-primary dark:text-white"></i>
+          </div>
+          <div class="visitor-counter-embed">
+            <script type="text/javascript" src="{{ .Site.Params.visitor_counter_script }}"></script>
+            {{ if .Site.Params.visitor_counter_credit_url }}
+            <div class="visitor-counter-credit">
+              <a href="{{ .Site.Params.visitor_counter_credit_url }}" target="_blank" rel="noopener noreferrer">{{ .Site.Params.visitor_counter_credit_text }}</a>
+            </div>
+            {{ end }}
+            {{ if .Site.Params.visitor_counter_aux_script }}
+            <script type="text/javascript" src="{{ .Site.Params.visitor_counter_aux_script }}"></script>
+            {{ end }}
+          </div>
+          {{ if .Site.Params.visitor_stats_url }}
+          <a href="{{ .Site.Params.visitor_stats_url }}" target="_blank" rel="noopener noreferrer" class="visitor-stats-link">
+            Open full visitor statistics
+          </a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="mt-8 pt-8 border-t border-border-primary text-center text-text-secondary dark:text-text-muted text-sm">
+      <p>© {{ time.Now.Year }} | {{ .Site.Params.copyright }}</p>
+    </div>
+  </div>
+</footer>

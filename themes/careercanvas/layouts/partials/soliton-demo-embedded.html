@@ -1,0 +1,35 @@
+{{ with .Site.GetPage "soliton-demo" }}
+<div class="not-prose mt-14 pt-10 border-t border-border-primary">
+  <div class="mb-10">
+    <h2 class="text-3xl font-bold mb-4 font-heading text-text-primary dark:text-text-primary">{{ .Title }}</h2>
+    <p class="text-lg text-text-secondary dark:text-text-tertiary italic">{{ .Params.intro | markdownify }}</p>
+  </div>
+
+  <div class="soliton-layout">
+    <div class="soliton-visual-card bg-bg-secondary dark:bg-bg-secondary rounded-2xl shadow-lg border border-border-primary dark:border-border-primary p-5 md:p-6">
+      <div class="soliton-meta-row">
+        <span class="soliton-chip">Interactive KdV Demo</span>
+        <span id="soliton-status" class="soliton-status">Separated Solitons</span>
+      </div>
+      <div class="soliton-canvas-shell">
+        <canvas id="soliton-canvas" class="soliton-canvas" aria-label="{{ .Title }}"></canvas>
+      </div>
+      <div class="soliton-controls">
+        <button id="soliton-replay" type="button" class="bg-gradient-primary text-white px-5 py-3 rounded-xl font-medium shadow-lg button-hover">
+          Replay Collision
+        </button>
+        <p class="soliton-caption">{{ .Params.note }}</p>
+      </div>
+    </div>
+
+    <div class="soliton-insight-panel">
+      {{ range .Params.highlights }}
+      <article class="soliton-insight-card bg-bg-secondary dark:bg-bg-secondary rounded-2xl shadow-lg border border-border-primary dark:border-border-primary p-6 card-hover">
+        <h3 class="text-xl font-semibold mb-3 text-text-primary dark:text-text-primary">{{ .title }}</h3>
+        <p class="text-text-secondary dark:text-text-tertiary leading-relaxed">{{ .description }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

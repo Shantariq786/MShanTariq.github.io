@@ -1,0 +1,37 @@
+{{ $dir := .Get "dir" }}
+{{ $path := printf "static/%s" $dir }}
+{{ $galleryId := replace (replace $dir "/" "-") " " "-" }}
+
+{{ if fileExists $path }}
+  {{ $files := readDir $path }}
+  {{ $count := len $files }}
+  {{ if gt $count 0 }}
+    {{ $first := index $files 0 }}
+    <div class="stacked-gallery-wrap">
+      <a href="/{{ $dir }}/{{ $first.Name }}" data-fslightbox="{{ $galleryId }}" class="stacked-gallery-trigger" aria-label="Open photo gallery">
+        <div class="stacked-photo-stack">
+          {{ if ge $count 3 }}
+            {{ $third := index $files 2 }}
+            <img src="/{{ $dir }}/{{ $third.Name }}" alt="{{ $third.Name }}" class="stacked-photo stacked-photo-back" loading="lazy">
+          {{ end }}
+          {{ if ge $count 2 }}
+            {{ $second := index $files 1 }}
+            <img src="/{{ $dir }}/{{ $second.Name }}" alt="{{ $second.Name }}" class="stacked-photo stacked-photo-middle" loading="lazy">
+          {{ end }}
+          <img src="/{{ $dir }}/{{ $first.Name }}" alt="{{ $first.Name }}" class="stacked-photo stacked-photo-front" loading="lazy">
+          <span class="stacked-gallery-badge">{{ $count }} photos</span>
+        </div>
+      </a>
+
+      {{ if gt $count 1 }}
+        {{ range after 1 $files }}
+          <a href="/{{ $dir }}/{{ .Name }}" data-fslightbox="{{ $galleryId }}" class="hidden" aria-hidden="true" tabindex="-1"></a>
+        {{ end }}
+      {{ end }}
+    </div>
+  {{ end }}
+{{ else }}
+  <div class="text-text-muted italic">
+    {{ i18n "galleryNotFound" }} {{ $dir }}
+  </div>
+{{ end }}

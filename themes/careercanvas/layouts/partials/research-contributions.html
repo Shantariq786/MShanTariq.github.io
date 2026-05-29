@@ -1,0 +1,22 @@
+<section id="research-contributions" class="py-12 bg-bg-secondary dark:bg-bg-secondary border-t border-border-primary" data-animate>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {{ with .Site.GetPage "contributions-home" }}
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-3xl font-bold mb-4 font-heading text-text-primary dark:text-text-primary">{{ .Title }}</h2>
+      {{ partial "last-updated.html" (dict "page" . "center" true) }}
+      <p class="text-lg text-text-secondary dark:text-text-tertiary italic">{{ .Params.intro }}</p>
+    </div>
+
+    <div class="research-contributions-grid">
+      {{ range .Params.contributions }}
+      <article class="research-contribution-card bg-bg dark:bg-bg p-7 rounded-2xl shadow-lg border border-border-primary dark:border-border-primary card-hover" data-animate>
+        <span class="research-contribution-badge">{{ .badge }}</span>
+        <h3 class="text-xl font-semibold mt-4 mb-3 text-text-primary dark:text-text-primary leading-snug">{{ .title }}</h3>
+        <p class="text-text-secondary dark:text-text-tertiary leading-relaxed mb-4">{{ .summary }}</p>
+        <p class="text-sm text-text-secondary dark:text-text-tertiary leading-relaxed border-l-4 border-primary-light pl-4">{{ .impact }}</p>
+      </article>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    {{ partial "head.html" . }}
+    
+    <!-- Color Variables - Load first to ensure CSS custom properties are available -->
+    {{ partial "color-variables.html" . }}
+    
+    {{ $styles := resources.Get "css/main.css" | postCSS (dict "config" "./postcss.config.js") }}
+    {{ if eq hugo.Environment "production" }}
+      {{ $styles = $styles | minify | fingerprint }}
+    {{ end }}
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />    
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}?v={{ now.Unix }}" data-version="{{ now.Unix }}">
+    <style>
+        /* Critical CSS to prevent FOUC */
+        body {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body class="bg-bg text-text-primary flex flex-col min-h-screen transition-colors duration-200">
+
+    {{ partial "nav.html" . }}
+    <div class="w-full h-16"></div>
+
+    <main class="flex-grow">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    {{ $scripts := resources.Get "js/scripts.js" }}
+    {{ $soliton := resources.Get "js/soliton-simulation.js" }}
+    {{ $gsap := resources.Get "js/gsap-animations.js" }}
+    {{ $pexels := resources.Get "js/pexels-background.js" }}
+    {{ $colors := resources.Get "js/dynamic-colors.js" }}
+    {{ if eq hugo.Environment "production" }}
+      {{ with $scripts }}{{ $scripts = . | minify | fingerprint }}{{ end }}
+      {{ with $soliton }}{{ $soliton = . | minify | fingerprint }}{{ end }}
+      {{ with $gsap }}{{ $gsap = . | minify | fingerprint }}{{ end }}
+      {{ with $pexels }}{{ $pexels = . | minify | fingerprint }}{{ end }}
+      {{ with $colors }}{{ $colors = . | minify | fingerprint }}{{ end }}
+    {{ end }}
+    {{ partial "pexels-config.html" . }}
+    {{ partial "color-config.html" . }}
+    {{ with $scripts }}<script src="{{ .RelPermalink }}"></script>{{ end }}
+    {{ with $soliton }}<script src="{{ .RelPermalink }}"></script>{{ end }}
+    {{ with $colors }}<script src="{{ .RelPermalink }}"></script>{{ end }}
+    {{ with $gsap }}<script src="{{ .RelPermalink }}"></script>{{ end }}
+    {{ with $pexels }}<script src="{{ .RelPermalink }}"></script>{{ end }}
+    <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
+
+    <script>
+        // Show content after styles are loaded
+        window.addEventListener('load', function() {
+            document.body.style.visibility = 'visible';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<section id="opportunities" class="py-12 bg-bg-secondary dark:bg-bg-secondary border-t border-border-primary" data-animate>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {{ with .Site.GetPage "opportunities" }}
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-3xl font-bold mb-4 font-heading text-text-primary dark:text-text-primary">{{ .Title }}</h2>
+      {{ partial "last-updated.html" (dict "page" . "center" true) }}
+      <p class="text-lg text-text-secondary dark:text-text-tertiary italic">{{ .Params.intro }}</p>
+    </div>
+
+    <div class="opportunities-grid">
+      {{ range .Params.opportunities }}
+      <article class="opportunity-card bg-bg dark:bg-bg rounded-2xl shadow-lg border border-border-primary dark:border-border-primary p-7 card-hover">
+        <span class="opportunity-badge">{{ .badge }}</span>
+        <h3 class="text-xl font-semibold mt-4 mb-3 text-text-primary dark:text-text-primary">{{ .title }}</h3>
+        <p class="text-text-secondary dark:text-text-tertiary leading-relaxed">{{ .description }}</p>
+      </article>
+      {{ end }}
+    </div>
+
+    <div class="max-w-4xl mx-auto mt-10">
+      <div class="opportunity-closing bg-bg dark:bg-bg rounded-2xl shadow-lg border border-border-primary dark:border-border-primary px-6 py-5 text-center">
+        <p class="text-base md:text-lg text-text-secondary dark:text-text-tertiary leading-relaxed">{{ .Params.closing }}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>

@@ -1,0 +1,61 @@
+<section id="publications" class="py-12 bg-bg dark:bg-bg border-t border-border-primary" data-animate>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {{ $publicationsPage := or (.Site.GetPage "/publications") (.Site.GetPage "/Publications") (.Site.GetPage "publications") (.Site.GetPage "Publications") }}
+    {{ with $publicationsPage }}
+    {{ $items := .Params.publications | default .Params.list }}
+    <h2 class="text-3xl font-bold text-center mb-4 font-heading text-text-primary dark:text-text-primary">{{ .Title }}</h2>
+    {{ partial "last-updated.html" (dict "page" . "center" true) }}
+    <p class="text-lg text-center mb-12 text-gray-700 dark:text-text-tertiary italic">{{ .Params.intro }}</p>
+
+    <div class="publication-grid">
+        {{ range $index, $pub := $items }}
+        <article class="publication-card publication-card-refined bg-bg dark:bg-bg p-7 rounded-2xl shadow-lg border border-border-primary dark:border-border-primary card-hover transition-transform duration-200 hover:-translate-y-1" data-animate>
+                <div class="publication-meta-row">
+                  {{ with $pub.journal }}
+                  <span class="publication-badge">{{ . }}</span>
+                  {{ end }}
+                  {{ with $pub.year }}
+                  <span class="publication-year">{{ . }}</span>
+                  {{ end }}
+                </div>
+                <h3 class="text-xl font-semibold text-text-primary dark:text-text-primary mb-3 leading-snug">
+                  {{ $pub.title | markdownify }}
+                </h3>
+                {{ with $pub.authors }}
+                <p class="text-sm text-text-secondary dark:text-text-tertiary mb-4 publication-authors">
+                  {{ . | markdownify }}
+                </p>
+                {{ end }}
+                <div class="publication-details mb-4">
+                  {{ with $pub.volume }}<span>Vol. {{ . }}</span>{{ end }}
+                  {{ with $pub.issue }}<span>Issue {{ . }}</span>{{ end }}
+                  {{ with $pub.article_number }}<span>Article {{ . }}</span>{{ end }}
+                </div>
+                {{ with $pub.description }}
+                <p class="text-sm text-text-secondary dark:text-text-tertiary mb-5 publication-summary">
+                  {{ . | markdownify }}
+                </p>
+                {{ end }}
+
+                {{ if or $pub.link $pub.pdf }}
+                <div class="flex flex-wrap gap-3 pt-2">
+                  {{ with $pub.link }}
+                  <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gradient-primary text-white px-4 py-2 rounded-xl font-medium shadow button-hover">
+                    <i class="fas fa-up-right-from-square mr-2 text-sm"></i>
+                    Website
+                  </a>
+                  {{ end }}
+                  {{ with $pub.pdf }}
+                  <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-bg-secondary dark:bg-bg-secondary text-text-primary dark:text-text-primary px-4 py-2 rounded-xl font-medium border border-border-primary dark:border-border-primary shadow button-hover">
+                    <i class="fas fa-file-pdf mr-2 text-sm text-second"></i>
+                    PDF
+                  </a>
+                  {{ end }}
+                </div>
+                {{ end }}
+        </article>
+        {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>

@@ -1,0 +1,7 @@
+{{- $page := .page -}}
+{{- if and $page $page.File -}}
+<p class="last-updated-label{{ if .center }} last-updated-label-center{{ end }}">
+  Last updated
+  <time datetime="{{ $page.Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ $page.Lastmod.Format "January 2, 2006" }}</time>
+</p>
+{{- end -}}
