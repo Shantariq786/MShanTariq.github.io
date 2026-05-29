@@ -1,0 +1,44 @@
+[[main]]
+name = "About"
+url = "/#about"
+weight = 2
+
+[[main]]
+name = "Skills"
+url = "/#skills"
+weight = 3
+
+[[main]]
+name = "Experience"
+url = "/#experience"
+weight = 4
+
+[[main]]
+name = "Tech Stack"
+url = "/#technical"
+weight = 4.5
+
+[[main]]
+name = "Publications"
+url = "/#publications"
+weight = 4.75
+
+[[main]]
+name = "Contact"
+url = "/#contact"
+weight = 5
+
+[[main]]
+name = "Research"
+url = "/research/"
+weight = 50
+
+[[main]]
+name = "Conferences"
+url = "/conferences/"
+weight = 55
+
+[[main]]
+name = "Life in USA"
+url = "/life-in-usa/"
+weight = 60

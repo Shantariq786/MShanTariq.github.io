@@ -3,47 +3,60 @@ title: "About"
 type: "homepage"
 featured_image: "/images/felipe-cordero-profile.jpeg"
 intro: >-
-  Hi! I'm Felipe Cordero, a **Structural Engineer, AI and Full Stack Developer** 🏗️🤖💻 with **14+ years** in AEC and software development. My journey has taken me from **Chile to Montréal**, where I combine traditional engineering with modern technology to solve complex problems in engineering and automation. Currently, I'm at <a href="https://fireraven.ai" target="_blank" rel="noopener noreferrer"><strong>Fireraven</strong></a>, building security and compliance solutions for LLM-based AI agents. Recently, I was honored with the **Academic Excellence Scholarship** (Air Canada, Collège LaSalle Montréal, 2025) 🏆 for my achievements in AI/ML studies.
+  I’m Muhammad Shan, a PhD candidate in Applied Mathematics and a physicist with a strong background in numerical analysis, scientific computing, and nonlinear partial differential equations. Currently, I am a Research Assistant in the <a href="https://www.umassd.edu/cas/math/people/graduate-assistants/" target="_blank" rel="noopener noreferrer"><strong>Department of Mathematics at the University of Massachusetts Dartmouth</strong></a>, where I work on structure-preserving numerical methods and high-order schemes for nonlinear dispersive systems. My research focuses on developing accurate numerical methods for nonlinear PDEs using the Discontinuous Galerkin framework. I have worked on the Korteweg-de Vries equation and coupled KdV systems, and I am broadly interested in advanced computational methods for challenging scientific problems.
 
 study: >-
-  Currently based in **Montréal** 🇨🇦, I'm deepening my skills in **Artificial Intelligence and Machine Learning** 🤖 at **Collège LaSalle**. I work with **Python** 🐍, **PyTorch**, and **predictive modeling** 📊 to build intelligent systems that bridge the gap between engineering and data science.
+  Based in Massachusetts, USA, I am pursuing doctoral research in Applied Mathematics at the University of Massachusetts Dartmouth. My work combines MATLAB, numerical analysis, and high-performance computation to develop accurate numerical methods for nonlinear PDEs and computational models that connect mathematics, physics, and applied scientific problems.
 
 passion_title: "What I'm passionate about"
 passion_text: >-
-  I'm passionate about learning and applying **AI to real-world engineering challenges** 🔬. At <a href="https://fireraven.ai" target="_blank" rel="noopener noreferrer"><strong>Fireraven</strong></a>, I design and develop **scalable full-stack solutions** using **Python (FastAPI, NestJS)** and **React (Next.js, TypeScript)** for LLM-based security and compliance platforms, maintaining a **50/50 split between backend and frontend development** ⚖️. I implement and optimize **PostgreSQL databases**, apply **OOP principles and design patterns (DRY, YAGNI, SOLID)** to build maintainable codebases, and collaborate with **global distributed teams** in Agile Scrum environments 🤝. Previously at <a href="https://obralink.com" target="_blank" rel="noopener noreferrer"><strong>ObraLink</strong></a>, I led the development of **autonomous structural analysis tools** and **ML models** for concrete estimation 🏢. My goal is to create **innovative solutions** that have a real impact on the built environment.
+  I am passionate about developing robust computational methods for nonlinear PDEs. As a Research Assistant at the University of Massachusetts Dartmouth, I work on Discontinuous Galerkin methods, scalable simulations, and structure-preserving algorithms for nonlinear dispersive systems. I use Python, MATLAB, and scientific-computing tools to build reproducible workflows and collaborate on research problems that require both mathematical rigor and computational efficiency. I am also interested in physics-informed machine learning, including Physics-Informed Neural Networks (PINNs), as a complement to classical numerical methods for complex scientific models.
 
 mix: >-
-  With experience in both **structural engineering** 🏗️ and **software development** 💻, I bring a **unique perspective** to technical challenges. I've led teams in building everything from **physical structures to scalable software systems**, always focusing on **practical, efficient solutions** ⚡. My **international background** and commitment to **continuous learning** drive me to bridge disciplines and deliver value across industries.
+  My long-term goal is to apply advanced numerical methods and scientific computing to challenging problems in both academia and industry. I am especially interested in bridging rigorous mathematical modeling with practical computational tools to develop methods that are accurate, efficient, and useful in applied settings.
 
 personal: >-
-  Outside work, I enjoy **tennis** 🎾, **cooking** 👨‍🍳, **drums** 🥁, **swimming** 🏊‍♂️, and **photography** 📸. I also **volunteer at LaSalle College**, helping new students settle in and supporting the academic community 🤝.
+  Outside research, I enjoy cricket, volleyball, fitness, cooking, photography, and occasionally creating YouTube videos as a hobby. I also care deeply about mentoring students from Pakistan who are exploring opportunities for graduate study abroad and competitive scholarship pathways.
 
 quickfacts:
   - icon: "briefcase"
-    title: "Current Role"
-    value: "🏗️🤖💻 Structural Engineer, AI and Full Stack Developer at <a href=\"https://fireraven.ai\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Fireraven</strong></a>"
+    title: "Current Position"
+    value: Research Assistant, <a href="https://www.umassd.edu/cas/math/people/graduate-assistants/" target="_blank" rel="noopener noreferrer"><strong>Department of Mathematics, University of Massachusetts Dartmouth</strong></a>
+  - icon: "medal"
+    title: "PhD Candidacy"
+    value: Passed my PhD proposal defense on <strong>May 28, 2026</strong>, and advanced to <strong>PhD candidate in Applied Mathematics</strong>.
   - icon: "graduation-cap"
     title: "Education"
-    value: "🏗️ <a href=\"https://uchile.cl/\" target=\"_blank\" rel=\"noopener noreferrer\">University of Chile</a>, **Bachelor's Degree in Civil Engineering**<br>🤖 <a href=\"https://lasallecollege.lcieducation.com/en\" target=\"_blank\" rel=\"noopener noreferrer\">Collège LaSalle Montréal</a>, **AEC: Artificial Intelligence and Machine Learning**"
+    kind: "list"
+    value: |
+      - <a href="https://www.comsats.edu.pk/" target="_blank" rel="noopener noreferrer"><strong>COMSATS University Islamabad</strong></a> — B.S. in Physics
+      - <a href="https://www.umassd.edu/cas/math/" target="_blank" rel="noopener noreferrer"><strong>University of Massachusetts Dartmouth</strong></a> — Ph.D. candidate in Applied Mathematics
+  - icon: "user-graduate"
+    title: "Advisors"
+    kind: "list"
+    value: |
+      - Undergraduate: <a href="https://scholar.google.com/citations?user=xgha-7gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><strong>Dr. Waqas Masood</strong></a> (potential advisor), <a href="https://www.ncp.edu.pk/tpd.php" target="_blank" rel="noopener noreferrer"><strong>Dr. Mohsin Siddiq</strong></a> (co-advisor)
+      - Ph.D.: <a href="https://www.umassd.edu/directory/bdong/" target="_blank" rel="noopener noreferrer"><strong>Prof. Bo Dong</strong></a> (potential advisor), <a href="https://www.umassd.edu/directory/ychen5/" target="_blank" rel="noopener noreferrer"><strong>Prof. Yanlai Chen</strong></a> (co-advisor)
   - icon: "award"
-    title: "Recent Achievement"
-    value: "🏆 Recipient of the <a href=\"/blog/academic-excellence-recognition/\" target=\"_blank\" rel=\"noopener\">Academic Excellence Scholarship</a> 🎓 sponsored by ✈️ Air Canada at Collège LaSalle Montréal (2025) 🎉"
+    title: "Recognition"
+    kind: "list"
+    value: |
+      - Recipient of a college-level scholarship through the <strong>Pakistan Science Foundation (PSF)</strong>.
+      - Recipient of a fully funded undergraduate scholarship from the <a href="https://www.hec.gov.pk/english/Pages/default.aspx" target="_blank" rel="noopener noreferrer"><strong>Higher Education Commission of Pakistan (HEC)</strong></a> under the Science Talent Farming Scheme (HEC-STFS), supporting four years of study in Physics.
+      - Currently pursuing a fully funded Ph.D., with my present research project supported by the <strong>National Science Foundation (NSF)</strong>.
   - icon: "language"
     title: "Languages"
     value: |
-      - 🇬🇧 English (IELTS C1)
-      - 🇨🇱 Spanish (Native)
-      - 🇫🇷 French (TCF B2)
+      - English
+      - Urdu, Punjabi (Native)
   - icon: "heart"
     title: "Interests"
     value: |
-      - ♟️ Chess
-      - 🎾 Tennis
-      - 🚴 Cycling
-      - 🏊‍♂️ Swimming
-      - 👨‍🍳 Cooking
-      - 🥁 Drumming
-      - 📸 Photography
-      - ✈️ Traveling
-      - 📚 Reading
+      - Cricket
+      - Running
+      - Cooking
+      - Photography
+      - YouTube
+      - Traveling
+      - Reading
 ---

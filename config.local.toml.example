@@ -1,0 +1,5 @@
+[params]
+  # Create a Formspree form, then paste your endpoint here.
+  # Example:
+  # formspreeendpoint = "https://formspree.io/f/mvzvyrpe"
+  formspreeendpoint = ""

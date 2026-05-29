@@ -2,73 +2,56 @@
 title: "Experience"
 type: "homepage"
 intro: >-
-  From structural engineering to AI development, building practical tools that bridge traditional engineering with modern technology.
 
 resume_downloads:
   - lang: en
     label: English
-  - lang: fr
-    label: Français
 
 positions:
-  - company: "Fireraven"
-    company_url: "https://fireraven.ai"
-    role: "AI and Full Stack Developer"
-    period: "May 2025 - Present"
-    industry: "AI Security & Compliance"
-    location: "Montreal - Canada"
-    company_description: "Leading provider of security and compliance solutions for LLM-based AI agents and assistants"
+  - company: "University of Massachusetts Dartmouth"
+    company_url: "https://www.umassd.edu/"
+    role: "Research Assistant"
+    period: "August 2024 - Present"
+    industry: "Academic Research / Computational Science / Scientific Computing"
+    location: "North Dartmouth, MA"
+    company_description: "Department of Mathematics at the University of Massachusetts Dartmouth, conducting research on high-performance numerical methods for nonlinear PDEs and their applications in physics and engineering."
     bullet_points:
-      - "Design and develop scalable full-stack solutions using Python (FastAPI, NestJS) and React (Next.js, TypeScript) for LLM-based security and compliance platforms, ensuring 50/50 split between backend and frontend development"
-      - "Implement and optimize PostgreSQL database schemas, queries, and data pipelines, handling complex relationships and ensuring regulatory compliance for financial-grade applications"
-      - "Apply OOP principles and design patterns (DRY, YAGNI, SOLID) to refactor legacy code, improve code maintainability, and reduce technical debt across multiple repositories"
-      - "Collaborate with global distributed teams in Agile Scrum environment, participating in daily stand-ups, sprint planning, retrospectives, and cross-functional code reviews"
-      - "Debug, troubleshoot, and optimize code to ensure platform reliability and contribute to real-time deployment and monitoring for regulatory compliance"
+      - "Developed a Discontinuous Galerkin (DG) scheme for the Korteweg–de Vries (KdV) equation using an
+       implicit penalization technique, improving numerical stability and conservation properties."
+      - "Redesigned an optimized DG formulation that reduces computational cost by requiring the solution of a nonlinear system only at the half time step and a linear system at the next time step, streamlining the process compared to solving nonlinear systems at both levels in the previous approach."
+      - "Developed a DG scheme that enables the implementation of higher-order time-stepping methods (e.g., IRK4), overcoming the limitation of earlier DG scheme that supported only up to second-order methods such as IRK2."
 
-  - company: "ObraLink"
-    company_url: "https://obralink.com"
-    role: "Senior Software Developer"
-    period: "August 2023 - May 2025"
-    industry: "Construction Technology"
-    location: "Remote"
-    company_description: "Innovative construction technology company developing AI-powered structural analysis tools"
+  - company: "Content Arcade (Pvt.) Ltd."
+    company_url: "https://www.contentarcade.com/"
+    role: "iOS Developer - Associate Software Engineer"
+    period: "March 2024 - June 2024"
+    industry: "Software Development / Mobile Apps"
+    location: "Faislabad, Pakistan"
+    company_description: "Innovative software development company specializing in mobile apps and AI-powered tools. Established in 2011, Content Arcade delivers high-quality, client-focused solutions across Pakistan and internationally. The company combines technical expertise, commitment to deadlines, and a customer-oriented approach to create reliable and scalable software solutions."
     bullet_points:
-      - "Led development of autonomous solutions for real-time structural analysis"
-      - "Created ML models for concrete demand estimation"
-      - "Authored innovation project reports seeking investments exceeding $500K USD"
+      - "Developed and enhanced features for the Add Text to Photos app, enabling users to edit images by adding customizable text with various styles."
+      - "Improved UI/UX for a seamless and intuitive photo customization experience on iOS devices."
+      - "Integrated AWS cloud services for efficient data storage and retrieval through API calls."
 
-  - company: "Tensacon"
-    company_url: "https://tensacon.cl"
-    role: "Technical Assistant Manager"
+  - company: "National Center for Physics"
+    company_url: "https://www.ncp.edu.pk/index.php"
+    role: "Research Internship"
     period: "March 2022 - July 2023"
-    industry: "Construction & Prefabrication"
-    location: "Chile"
-    company_description: "Specialized in prefabricated construction solutions and BIM implementation"
+    industry: "Research Center"
+    location: "Islamabad, Pakistan"
+    company_description: "National Centre for Physics (NCP) is Pakistan’s national laboratory for advanced research and training in theoretical and experimental physics, fostering international collaboration and applied technological innovation."
     bullet_points:
-      - "Led BIM team to enhance quality and productivity, delivering multiple Fast Track projects"
-      - "Designed solutions for major prefabricated projects, including CODELCO facilities and Pan American Games venues"
-      - "Developed automated workflows reducing design time by 40%"
+      - "Research internship of almost ten months in the Theoretical Physics Department (TPD) for the publicationof my research work."
+      - "Expanded the research project to study the Cylindrical Korteweg-de Vries (CKdV) equation, deriving analytical solutions using the Bäcklund transformation and investigating N-soliton solutions for KdV-type models."
 
-  - company: "Sirve Engineering"
-    company_url: "https://sirve.cl"
-    role: "Structural Engineering Team Lead and R&D Coordinator"
-    period: "March 2019 - March 2022"
-    industry: "Structural Engineering"
-    location: "Chile"
-    company_description: "Engineering firm specializing in high-rise residential and commercial structures"
+  - company: "National Center for Physics"
+    company_url: "https://www.ncp.edu.pk/index.php"
+    role: "Summer Internship"
+    period: "June 2021 - August 2021"
+    industry: "Research Center"
+    location: "Islamabad, Pakistan"
     bullet_points:
-      - "Directed R&D for software tools, reducing initial engineering and structure sizing time by 75%"
-      - "Managed multiple high-rise residential and commercial complexes (~20,000 m² each)"
-      - "Implemented parametric modeling for complex geometries"
+      - "Worked in the Theoretical Physics Department under the supervision of Dr. Mohsin Siddiq and Dr. Waqas Masood."
+      - "During this internship, learned different mathematical methods to solve linear and nonlinear PDEs."
 
-  - company: "Various Engineering Firms"
-    role: "Structural Engineer"
-    period: "2010 - 2018"
-    industry: "Structural Engineering"
-    location: "Chile"
-    company_description: "Multiple engineering firms focusing on seismic-resistant structures and custom solutions"
-    bullet_points:
-      - "Designed seismic-resistant structures"
-      - "Developed custom calculation tools"
-      - "Mentored junior engineers"
 ---

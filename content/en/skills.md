@@ -2,46 +2,36 @@
 title: "Skills"
 type: "homepage"
 intro: >-
-  Combining 14+ years of structural engineering expertise with modern full-stack software development, specializing in Python, React, and AI/ML capabilities.
+  Combining extensive software development expertise with modern iOS and full-stack capabilities, specializing in Python, Swift, C++, MATLAB, and AI/ML frameworks. Experienced in collaborative project execution, engineering solutions, and professional communication.
 
 domains:
   - icon: "code"
-    title: "Full Stack Development"
-    description: "Building scalable full-stack solutions with Python (FastAPI, NestJS) and React (Next.js, TypeScript), maintaining 50/50 backend/frontend split. Expertise in OOP principles, design patterns (DRY, YAGNI, SOLID), and microservices architecture."
+    title: "Programming Languages"
+    description: "Proficient in Swift (iOS App Development), C++, Python, MATLAB, LaTeX (Overleaf), HTML, and CSS. Strong command of OOP principles and software design best practices."
     devicon_class: "devicon-python-plain colored"
 
-  - icon: "brain"
-    title: "AI Security & Compliance"
-    description: "Designing and developing security and compliance features for LLM-based agents. Building enterprise-grade solutions with regulatory compliance for financial applications, leveraging Generative AI technologies."
-    devicon_class: "devicon-tensorflow-original colored"
-
-  - icon: "database"
-    title: "Database & Data Management"
-    description: "Implementing and optimizing PostgreSQL database schemas, queries, and data pipelines. Handling complex relationships and ensuring regulatory compliance for financial-grade applications."
-    devicon_class: "devicon-postgresql-plain colored"
+  - icon: "mobile-alt"
+    title: "iOS Development"
+    description: "Building iOS applications using Swift, Xcode, RESTful APIs, Firebase (Local & Push Notifications), Core Data, CocoaPods, Alamofire, and adhering to UI/UX design principles."
+    devicon_class: "devicon-swift-plain colored"
 
   - icon: "tools"
-    title: "Engineering Expertise"
-    description: "Applying structural engineering knowledge with modern technology to create innovative solutions for complex engineering challenges."
-    devicon_class: "devicon-docker-plain colored"
+    title: "Development Tools & Version Control"
+    description: "Experienced with Git for version control, GitHub and GitLab for collaboration, and VSCode/Xcode as primary development environments."
+    devicon_class: "devicon-git-plain colored"
+
+  - icon: "brain"
+    title: "Data Science & AI/ML"
+    description: "Applying Python-based libraries such as NumPy, Pandas, Matplotlib, and Plotly for data analysis and visualization, with experience in PyTorch and TensorFlow for machine learning and AI applications."
+    devicon_class: "devicon-tensorflow-original colored"
 
   - icon: "users"
-    title: "Agile Collaboration & Leadership"
-    description: "Collaborating with global distributed teams in Agile Scrum environments. Leading cross-functional teams in R&D and software development, managing complex projects, and coordinating multidisciplinary initiatives."
+    title: "Collaboration & Soft Skills"
+    description: "Effective teamwork, strong communication, adaptability, and time management. Skilled at collaborating with global teams and leading projects from concept to delivery."
     devicon_class: "devicon-github-original colored"
 
   - icon: "lightbulb"
-    title: "Business & Strategy"
-    description: "Developing innovation strategies and preparing comprehensive documentation for tech-driven solutions, including investment proposals exceeding $500K USD."
-    devicon_class: "devicon-react-original colored"
-
-  - icon: "globe"
-    title: "International Experience"
-    description: "Native Spanish speaker with IELTS C1 English proficiency and TCF B2 French, enabling effective communication in diverse international settings and global distributed teams."
-    devicon_class: "devicon-html5-plain colored"
-
-  - icon: "hands-helping"
-    title: "Community & Learning"
-    description: "Active in volunteer work and professional development, including structural assessment for disaster relief and student welcome programs. Recipient of Academic Excellence Scholarship at Collège LaSalle Montréal."
-    devicon_class: "devicon-javascript-plain colored"
+    title: "Engineering Expertise"
+    description: "Leveraging engineering knowledge and programming expertise to create efficient, reliable, and scalable solutions for complex technical problems."
+    devicon_class: "devicon-matlab-plain colored"
 ---

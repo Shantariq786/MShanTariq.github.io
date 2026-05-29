@@ -1,104 +1,98 @@
 # Hugo Site Configuration
 baseURL = "https://felipecordero.com"
 languageCode = "en-us"
-title = "Felipe Cordero"
+contentDir = "content/en"
+ignoreFiles = [
+  "^content/es/",
+  "^content/fr/",
+  "^i18n/es\\.toml$",
+  "^i18n/fr\\.toml$",
+  "^config/_default/menus\\.es\\.toml$",
+  "^config/_default/menus\\.fr\\.toml$"
+]
+title = "M. Shan Tariq"
 theme = "careercanvas"
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
-
-[languages]
-  [languages.en]
-    contentDir = "content/en"
-    languageName = "English"
-    weight = 1
-    [languages.en.params]
-      tagline = "Engineer. Coder. Problem Solver."
-      hero_description = "Structural Engineer, AI and Full Stack Developer with 14+ years in Architecture, Engineering, and Construction (AEC). Currently building security and compliance solutions for LLM-based AI agents at Fireraven."
-      hero_location = "Montréal, Canada"
-      resume_url = "/files/Felipe_Cordero_CV_English_version.pdf"
-      collab_tags = [
-        "Full Stack Development",
-        "AI Security & Compliance",
-        "LLM-based Solutions",
-        "PostgreSQL & Data Pipelines",
-        "Agile Scrum"
-      ]
-  [languages.es]
-    contentDir = "content/es"
-    languageName = "Español"
-    weight = 2
-    [languages.es.params]
-      tagline = "Ingeniero. Desarrollador de Software. Solucionador de problemas."
-      hero_description = "Ingeniero estructural, IA y desarrollador full stack con más de 14 años en Arquitectura, Ingeniería y Construcción (AEC). Creando soluciones inteligentes y de seguridad para agentes de IA basados en LLM."
-      hero_location = "Montreal, Canadá"
-      resume_url = "/files/Felipe_Cordero_CV_English_version.pdf"
-      collab_tags = [
-        "Soluciones de IA/ML",
-        "Software de Ingeniería",
-        "I+D e Innovación",
-        "Liderazgo Técnico",
-        "Tecnología en Construcción"
-      ]
-  [languages.fr]
-    contentDir = "content/fr"
-    languageName = "Français"
-    weight = 3
-    [languages.fr.params]
-      tagline = "Ingénieur. Codeur. Résolveur de problèmes."
-      hero_description = "Ingénieur structure, IA et développeur full stack avec plus de 14 ans d'expérience en architecture, ingénierie et construction (AEC). Développement de solutions de sécurité et conformité pour agents IA basés sur LLM."
-      hero_location = "Montréal, Canada"
-      resume_url = "/files/Felipe_Cordero_CV_French_version.pdf"
-      collab_tags = [
-        "Solutions IA/ML",
-        "Logiciels d'ingénierie",
-        "R&D et Innovation",
-        "Leadership technique",
-        "Technologie de construction"
-      ]
 
 [build]
   writeStats = true
 
 [params]
-name = "Felipe Cordero"
-firstName = "Felipe"
-lastName = "Cordero"
-email = "mail@felipecordero.com"
-profile_image = "/images/felipe-cordero-profile.jpg"
-author = "Felipe Cordero"
+name = "M. Shan Tariq"
+firstName = "M. Shan"
+lastName = "Tariq"
+tagline = "Physicist. Coder. PDEs Solver."
+hero_description = "PhD candidate in Applied Mathematics working in numerical methods, nonlinear PDEs, and high-performance scientific computing."
+hero_location = "North Dartmouth, Massachusetts, USA"
+resume_url = "/files/M. Shan Tariq - CV.pdf"
+collab_tags = [
+  "Discontinuous Galerkin Methods",
+  "Non-­linear Partial Differential Equations",
+  "Numerical Analysis",
+]
+email = "mtariq4@umassd.edu"
+secondary_email = "shan.tariq.m@gmail.com"
+profile_image = "/images/shan.jpg"
+profile_images = [
+  "/images/shan.jpg",
+  "/images/profile-rotation/img-0326.jpg",
+  "/images/profile-rotation/img-2524.jpg",
+  "/images/profile-rotation/img-6655.jpg",
+  "/images/profile-rotation/img-8357.jpg",
+]
+author = "M. Shan Tariq"
 
-og_image = "images/felipecordero-og.png"
+og_image = "images/shan.jpg"
 
-description = "Structural Engineer, AI and Full Stack Developer. Building security and compliance solutions for LLM-based AI agents at Fireraven."
+description = "PhD candidate in Applied Mathematics working in numerical methods, nonlinear PDEs, and high-performance scientific computing."
 
-linkedin_url = "https://www.linkedin.com/in/felipe-cordero-osorio"
-linkedin_text = "linkedin.com/in/felipe-cordero-osorio"
-github_url = "https://github.com/felipecordero"
-github_text = "github.com/felipecordero"
+linkedin_url = "https://www.linkedin.com/in/m-shan-tariq/"
+linkedin_text = "https://www.linkedin.com/in/m-shan-tariq/"
+github_url = "https://github.com/Shantariq786"
+github_text = "https://github.com/Shantariq786"
+instagram_url = "https://www.instagram.com/m_shan_tariq/"
+instagram_text = "https://www.instagram.com/m_shan_tariq/"
+youtube_url = "https://www.youtube.com/@shantariq7"
+youtube_text = "YouTube Channel"
+scholar_url = "https://scholar.google.com/citations?user=Qs08F3gAAAAJ&hl=en"
+scholar_text = "Google Scholar Profile"
+visitor_stats_url = "https://free-hit-counters.net/stats/d2zn?"
+visitor_counter_script = "https://free-hit-counters.net/count/jzjo"
+visitor_counter_credit_url = "https://www.acadoo.de/leistungen/ghostwriter-doktorarbeit/"
+visitor_counter_credit_text = "Doktorarbeit Coaching"
+visitor_counter_aux_script = "https://whomania.com/ctr?id=20b2249317ddc75169be2167af51f22e9c07390d"
 
-calendly_url = "https://calendly.com/mail-felipecordero/30min"
 calendly_height = "700px"
 
 copyright = "Felipe Cordero"
 
 
-resume_url_en = "/files/Felipe_Cordero_CV_English_version.pdf"
-resume_url_fr = "/files/Felipe_Cordero_CV_French_version.pdf"
+resume_url_en = "/files/M. Shan Tariq - CV.pdf"
+resume_url_fr = "/files/M. Shan Tariq - CV.pdf"
 resume_label = "View CV"
 
 # Form and Pexels: set in config or config.local.toml. CI: HUGO_PARAMS_FORMSPREEENDPOINT, HUGO_PARAMS_PEXELSAPIKEY (no underscores)
-formspreeendpoint = ""
+formspreeendpoint = "https://formspree.io/f/mvzvyrpe"
 pexelsapikey = ""
 
 [[params.social]]
 icon = "linkedin-in"
-url = "https://www.linkedin.com/in/felipe-cordero-osorio/"
+url = "https://www.linkedin.com/in/m-shan-tariq/"
 
 [[params.social]]
 icon = "github"
-url = "https://github.com/felipecordero"
+url = "https://github.com/Shantariq786"
 
-sectionPagesMenu = 'main'
+[[params.social]]
+icon = "instagram"
+url = "https://www.instagram.com/m_shan_tariq/"
+
+[[params.social]]
+icon = "youtube"
+url = "https://www.youtube.com/@shantariq7"
+
+[[params.social]]
+icon = "google-scholar"
+url = "https://scholar.google.com/citations?user=Qs08F3gAAAAJ&hl=en"
 
 
 [taxonomies]
@@ -106,10 +100,19 @@ sectionPagesMenu = 'main'
 
 [markup]
   [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$'], ['\[', '\]']]
+          inline = [['\(', '\)']]
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
     style = "monokai"
+
+[frontmatter]
+  lastmod = [":fileModTime", "lastmod", "date", "publishDate", "publishdate"]
 
 [server]
   [[server.headers]]
@@ -123,63 +126,51 @@ sectionPagesMenu = 'main'
 [params.color_palettes]
   [[params.color_palettes.palette]]
     name = "professional"
-    main_color = "#474A51"    # Graphite Gray – ultra professional, metallic, predominant
-    second_color = "#E52521"  # Mario Red – subtle accent, inspired by Super Mario
-    third_color = "#3CB043"   # Luigi Green – subtle accent, inspired by Luigi
+    main_color = "#3F4A5A"    # Graphite blue-gray
+    second_color = "#8A6F5A"  # Warm bronze
+    third_color = "#6E8B74"   # Muted sage
   
   [[params.color_palettes.palette]]
     name = "ocean"
-    main_color = "#1E40AF"    # Vibrant Blue – energetic and modern
-    second_color = "#06B6D4"  # Cyan – fresh and innovative
-    third_color = "#10B981"   # Emerald – growth and success
-  
-  # [[params.color_palettes.palette]]
-  #   name = "sunset"
-  #   main_color = "#DC2626"    # Vibrant Red – warm and energetic
-  #   second_color = "#F59E0B"  # Amber – optimistic and bright
-  #   third_color = "#EF4444"   # Red Orange – passion and creativity
-  # 
-  # [[params.color_palettes.palette]]
-  #   name = "forest"
-  #   main_color = "#059669"    # Deep Emerald – natural and stable
-  #   second_color = "#10B981"  # Green – growth and success
-  #   third_color = "#F59E0B"   # Golden Yellow – wisdom and clarity
-  # 
-  # [[params.color_palettes.palette]]
-  #   name = "fire"
-  #   main_color = "#EA580C"    # Orange – creativity and enthusiasm
-  #   second_color = "#DC2626"  # Red – passion and energy
-  #   third_color = "#F59E0B"   # Amber – warmth and optimism
+    main_color = "#274C77"    # Deep ocean blue
+    second_color = "#5C7C8A"  # Slate cyan
+    third_color = "#7F9C96"   # Sea glass
   
   [[params.color_palettes.palette]]
     name = "steel"
-    main_color = "#374151"    # Steel Gray – industrial and reliable
-    second_color = "#6B7280"  # Medium Gray – balanced and professional
-    third_color = "#10B981"   # Emerald – success and precision
+    main_color = "#4B5563"    # Steel gray
+    second_color = "#7C8796"  # Cool silver
+    third_color = "#8C7B6B"   # Taupe accent
   
   [[params.color_palettes.palette]]
     name = "navy"
-    main_color = "#1E3A8A"    # Navy Blue – authoritative and trustworthy
-    second_color = "#3B82F6"  # Bright Blue – innovation and clarity
-    third_color = "#F59E0B"   # Amber – excellence and achievement
-  
-  # [[params.color_palettes.palette]]
-  #   name = "charcoal"
-  #   main_color = "#1F2937"    # Charcoal – sophisticated and modern
-  #   second_color = "#EF4444"  # Red – energy and determination
-  #   third_color = "#22C55E"   # Green – growth and stability
+    main_color = "#1F365C"    # Academic navy
+    second_color = "#6B7C93"  # Desaturated blue gray
+    third_color = "#9B8C74"   # Soft brass
   
   [[params.color_palettes.palette]]
     name = "slate"
-    main_color = "#475569"    # Slate Blue – professional and calm
-    second_color = "#0EA5E9"  # Sky Blue – clear thinking and progress
-    third_color = "#F97316"   # Orange – creativity and innovation
+    main_color = "#556070"    # Slate blue gray
+    second_color = "#7A8CA5"  # Dusty steel blue
+    third_color = "#8C7F70"   # Stone brown
   
   [[params.color_palettes.palette]]
     name = "midnight"
-    main_color = "#0F172A"    # Midnight Blue – deep and authoritative
-    second_color = "#8B5CF6"  # Purple – innovation and technology
-    third_color = "#06B6D4"   # Cyan – precision and clarity
+    main_color = "#162033"    # Midnight ink
+    second_color = "#4F647A"  # Smoked blue
+    third_color = "#7B8F8A"   # Muted mineral green
+
+  [[params.color_palettes.palette]]
+    name = "sandstone"
+    main_color = "#5A4E43"    # Sandstone brown
+    second_color = "#8B7867"  # Warm stone
+    third_color = "#7E8B7A"   # Olive gray
+
+  [[params.color_palettes.palette]]
+    name = "academic"
+    main_color = "#334155"    # Bookish blue slate
+    second_color = "#64748B"  # Cool slate
+    third_color = "#8A8175"   # Paper brown
   
 
 
