@@ -1,5 +1,5 @@
 # Hugo Site Configuration
-baseURL = "https://mshantariq.github.io/"
+baseURL = "https://shantariq786.github.io/MShanTariq.github.io/"
 languageCode = "en-us"
 contentDir = "content/en"
 ignoreFiles = [
