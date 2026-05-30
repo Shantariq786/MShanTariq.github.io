@@ -183,7 +183,7 @@ For the generalized KdV equation, existing conservative DG methods preserve thes
 
 For the coupled Hirota-Satsuma KdV system, I developed a new conservative DG method that, to the best of my knowledge, is the first of its kind. By carefully designing the numerical traces, the derivative terms are removed while preserving mass, energy, and Hamiltonian at the discrete level. The resulting schemes are designed to achieve strong conservation properties, long-time stability, and optimal convergence behavior.
 
-At this stage, this part of my PhD work is complete and I am in the writing phase.
+This part of my PhD work is now complete. We have finished the writing process and submitted the paper to the *Journal of Computational Physics* for publication. A preprint of this work is available in the Preprints section.
 
 ### Current and Future Directions
 
