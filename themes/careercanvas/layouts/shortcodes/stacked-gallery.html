@@ -7,25 +7,29 @@
   {{ $count := len $files }}
   {{ if gt $count 0 }}
     {{ $first := index $files 0 }}
+    {{ $firstPath := printf "%s/%s" $dir $first.Name | relURL }}
     <div class="stacked-gallery-wrap">
-      <a href="/{{ $dir }}/{{ $first.Name }}" data-fslightbox="{{ $galleryId }}" class="stacked-gallery-trigger" aria-label="Open photo gallery">
+      <a href="{{ $firstPath }}" data-fslightbox="{{ $galleryId }}" class="stacked-gallery-trigger" aria-label="Open photo gallery">
         <div class="stacked-photo-stack">
           {{ if ge $count 3 }}
             {{ $third := index $files 2 }}
-            <img src="/{{ $dir }}/{{ $third.Name }}" alt="{{ $third.Name }}" class="stacked-photo stacked-photo-back" loading="lazy">
+            {{ $thirdPath := printf "%s/%s" $dir $third.Name | relURL }}
+            <img src="{{ $thirdPath }}" alt="{{ $third.Name }}" class="stacked-photo stacked-photo-back" loading="lazy">
           {{ end }}
           {{ if ge $count 2 }}
             {{ $second := index $files 1 }}
-            <img src="/{{ $dir }}/{{ $second.Name }}" alt="{{ $second.Name }}" class="stacked-photo stacked-photo-middle" loading="lazy">
+            {{ $secondPath := printf "%s/%s" $dir $second.Name | relURL }}
+            <img src="{{ $secondPath }}" alt="{{ $second.Name }}" class="stacked-photo stacked-photo-middle" loading="lazy">
           {{ end }}
-          <img src="/{{ $dir }}/{{ $first.Name }}" alt="{{ $first.Name }}" class="stacked-photo stacked-photo-front" loading="lazy">
+          <img src="{{ $firstPath }}" alt="{{ $first.Name }}" class="stacked-photo stacked-photo-front" loading="lazy">
           <span class="stacked-gallery-badge">{{ $count }} photos</span>
         </div>
       </a>
 
       {{ if gt $count 1 }}
         {{ range after 1 $files }}
-          <a href="/{{ $dir }}/{{ .Name }}" data-fslightbox="{{ $galleryId }}" class="hidden" aria-hidden="true" tabindex="-1"></a>
+          {{ $extraPath := printf "%s/%s" $dir .Name | relURL }}
+          <a href="{{ $extraPath }}" data-fslightbox="{{ $galleryId }}" class="hidden" aria-hidden="true" tabindex="-1"></a>
         {{ end }}
       {{ end }}
     </div>

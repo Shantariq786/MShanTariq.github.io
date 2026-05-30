@@ -51,7 +51,9 @@
           </a>
           {{ end }}
           {{ with .pdf }}
-          <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-bg-secondary dark:bg-bg-secondary text-text-primary dark:text-text-primary px-4 py-2 rounded-xl font-medium border border-border-primary dark:border-border-primary shadow button-hover">
+          {{ $pdfUrl := . }}
+          {{ if hasPrefix . "/" }}{{ $pdfUrl = (strings.TrimPrefix "/" .) | relURL }}{{ end }}
+          <a href="{{ $pdfUrl }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-bg-secondary dark:bg-bg-secondary text-text-primary dark:text-text-primary px-4 py-2 rounded-xl font-medium border border-border-primary dark:border-border-primary shadow button-hover">
             <i class="fas fa-file-pdf mr-2 text-sm text-second"></i>
             PDF
           </a>

@@ -1,6 +1,10 @@
 <section id="home" class="flex items-center justify-center gradient-bg text-white relative overflow-hidden hero-section">
   {{ $publicationsPage := or (.Site.GetPage "/publications") (.Site.GetPage "/Publications") (.Site.GetPage "publications") (.Site.GetPage "Publications") }}
   {{ $publicationCount := 0 }}
+  {{ $profileImages := slice }}
+  {{ range .Site.Params.profile_images }}
+    {{ $profileImages = $profileImages | append ((strings.TrimPrefix "/" .) | relURL) }}
+  {{ end }}
   {{ with $publicationsPage }}
     {{ $publicationCount = len (.Params.publications | default .Params.list) }}
   {{ end }}
@@ -16,8 +20,8 @@
               <div class="w-full h-full rounded-full overflow-hidden bg-white">
                 <img 
                   id="hero-profile-image"
-                  src="{{ .Site.Params.profile_image }}" 
-                  data-images='{{ .Site.Params.profile_images | jsonify }}'
+                  src="{{ (strings.TrimPrefix "/" .Site.Params.profile_image) | relURL }}" 
+                  data-images='{{ $profileImages | jsonify }}'
                   alt="Portrait of {{ .Site.Params.name }}" 
                   loading="lazy" 
                   decoding="async" 
@@ -88,7 +92,7 @@
           <a href="#contact" class="bg-bg text-primary dark:text-white px-8 py-4 rounded-xl font-semibold hero-button button-hover">
             {{ i18n "getInTouch" }}
           </a>
-          <a href="{{ .Site.Params.resume_url }}" target="_blank" rel="noopener" class="hero-button hero-button-secondary px-8 py-4 rounded-xl font-semibold">
+          <a href="{{ (strings.TrimPrefix "/" .Site.Params.resume_url) | relURL }}" target="_blank" rel="noopener" class="hero-button hero-button-secondary px-8 py-4 rounded-xl font-semibold">
             {{ i18n "viewCV" }}
           </a>
         </div>

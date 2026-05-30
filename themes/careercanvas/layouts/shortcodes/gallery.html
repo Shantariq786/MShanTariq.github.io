@@ -7,8 +7,9 @@
     {{ $files := readDir $path }}
     {{ range $files }}
       {{ $filename := .Name }}
-      <a href="/{{ $dir }}/{{ $filename }}" data-fslightbox="gallery">
-        <img src="/{{ $dir }}/{{ $filename }}" alt="{{ $filename }}" class="{{ if $compact }}gallery-thumb-compact{{ else }}w-full rounded shadow hover:scale-105 transition-transform duration-300{{ end }}" loading="lazy">
+      {{ $assetPath := printf "%s/%s" $dir $filename | relURL }}
+      <a href="{{ $assetPath }}" data-fslightbox="gallery">
+        <img src="{{ $assetPath }}" alt="{{ $filename }}" class="{{ if $compact }}gallery-thumb-compact{{ else }}w-full rounded shadow hover:scale-105 transition-transform duration-300{{ end }}" loading="lazy">
       </a>
     {{ end }}
   </div>

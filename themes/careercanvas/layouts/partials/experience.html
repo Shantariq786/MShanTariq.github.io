@@ -16,7 +16,7 @@
           {{ with index $.Params.resume_downloads 0 }}
             {{ with .label }}{{ $label = . }}{{ end }}
           {{ end }}
-          <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="{{ $buttonClass }} button-hover">
+          <a href="{{ (strings.TrimPrefix "/" .) | relURL }}" target="_blank" rel="noopener noreferrer" class="{{ $buttonClass }} button-hover">
             <i class="fas fa-file-pdf text-2xl mr-3"></i>
             {{ i18n "downloadResume" }} ({{ $label }})
           </a>
