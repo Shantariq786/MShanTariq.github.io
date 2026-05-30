@@ -1,13 +1,15 @@
 {{ $dir := .Get "dir" }}
 {{ $path := printf "static/%s" $dir }}
+{{ $compact := eq (.Get "compact") "true" }}
 
 {{ if fileExists $path }}
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+  <div class="gallery-grid {{ if $compact }}gallery-grid-compact{{ else }}grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4{{ end }}">
     {{ $files := readDir $path }}
     {{ range $files }}
       {{ $filename := .Name }}
-      <a href="/{{ $dir }}/{{ $filename }}" data-fslightbox="gallery">
-        <img src="/{{ $dir }}/{{ $filename }}" alt="{{ $filename }}" class="w-full rounded shadow hover:scale-105 transition-transform duration-300" loading="lazy">
+      {{ $assetPath := printf "%s/%s" $dir $filename | relURL }}
+      <a href="{{ $assetPath }}" data-fslightbox="gallery">
+        <img src="{{ $assetPath }}" alt="{{ $filename }}" class="{{ if $compact }}gallery-thumb-compact{{ else }}w-full rounded shadow hover:scale-105 transition-transform duration-300{{ end }}" loading="lazy">
       </a>
     {{ end }}
   </div>
@@ -16,4 +18,3 @@
     {{ i18n "galleryNotFound" }} {{ $dir }}
   </div>
 {{ end }}
-
