@@ -9,4 +9,4 @@ These photos capture a special day in my PhD journey and reflect the personal si
 
 ### Proposal Defense Photos
 
-{{< gallery dir="images/proposal-defense" >}}
+{{< stacked-gallery dir="images/proposal-defense" >}}
