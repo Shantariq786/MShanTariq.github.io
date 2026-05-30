@@ -1,12 +1,12 @@
 ---
 title: "Life in USA"
-description: "A personal visual page with moments from life, travel, and day-to-day experiences in the United States."
+description: "A personal page highlighting important moments from my PhD journey in the United States."
 ---
 
-This page is a small visual journal alongside my academic work. It is a place to share moments from life in the United States, including travel, everyday experiences, and personal memories outside research.
+This page highlights memorable moments from my life in the United States alongside my academic journey. For now, I wanted to feature a few photos from my PhD proposal defense, which was an important milestone in my graduate studies.
 
-I think of it as a more human side of the website: not a formal research section, but a space for photos and stories that reflect the broader experience of living and studying abroad.
+These photos capture a special day in my PhD journey and reflect the personal side of the work that happens behind research, writing, and academic progress.
 
-### Photo Gallery
+### Proposal Defense Photos
 
-{{< gallery dir="images/life-in-usa" >}}
+{{< gallery dir="images/proposal-defense" >}}
