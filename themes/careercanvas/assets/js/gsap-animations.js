@@ -734,7 +734,7 @@ function createAndAnimateSolarCore(container, options = {}) {
 function createAndAnimateEquationGlyphs(container, options = {}) {
     const config = {
         count: 6,
-        opacity: 0.1,
+        opacity: 0.16,
         duration: 10,
         snippets: [
             '\\(u_t + 6u u_x + u_{xxx} = 0\\)',
@@ -744,13 +744,13 @@ function createAndAnimateEquationGlyphs(container, options = {}) {
             '\\(H[u]\\)',
             '\\(\\frac{d}{dx}\\)'
         ],
-        fontMin: 0.9,
-        fontMax: 1.45,
-        color: 'color-mix(in srgb, var(--color-primary-lighter) 70%, white)',
+        fontMin: 1.1,
+        fontMax: 1.75,
+        color: 'color-mix(in srgb, var(--color-primary-lighter) 82%, white)',
         xDrift: 40,
         yDrift: 28,
-        letterSpacing: '0.08em',
-        textShadow: '0 0 14px color-mix(in srgb, var(--color-primary-light) 25%, transparent)',
+        letterSpacing: '0.04em',
+        textShadow: '0 0 20px color-mix(in srgb, var(--color-primary-light) 38%, transparent)',
         ...options
     };
 
@@ -763,10 +763,10 @@ function createAndAnimateEquationGlyphs(container, options = {}) {
             left: `${pos.x}%`,
             top: `${pos.y}%`,
             opacity: '0',
-            zIndex: '0',
+            zIndex: '1',
             color: config.color,
             fontSize: `${config.fontMin + Math.random() * (config.fontMax - config.fontMin)}rem`,
-            fontWeight: '600',
+            fontWeight: '700',
             letterSpacing: config.letterSpacing,
             textTransform: 'none',
             whiteSpace: 'nowrap',
@@ -802,7 +802,7 @@ function createAndAnimateEquationGlyphs(container, options = {}) {
 function createAndAnimateMathSymbols(container, options = {}) {
     const config = {
         count: 10,
-        opacity: 0.12,
+        opacity: 0.18,
         duration: 11,
         symbols: [
             '\\(\\partial\\)',
@@ -828,14 +828,14 @@ function createAndAnimateMathSymbols(container, options = {}) {
             left: `${pos.x}%`,
             top: `${pos.y}%`,
             opacity: '0',
-            zIndex: '0',
-            color: 'color-mix(in srgb, var(--color-primary-lighter) 72%, white)',
-            fontSize: `${1 + Math.random() * 0.9}rem`,
+            zIndex: '1',
+            color: 'color-mix(in srgb, var(--color-primary-lighter) 82%, white)',
+            fontSize: `${1.2 + Math.random() * 1}rem`,
             fontWeight: '700',
             letterSpacing: '0.04em',
             whiteSpace: 'nowrap',
             transform: `rotate(${(Math.random() - 0.5) * 22}deg)`,
-            textShadow: '0 0 16px color-mix(in srgb, var(--color-primary-light) 28%, transparent)'
+            textShadow: '0 0 22px color-mix(in srgb, var(--color-primary-light) 36%, transparent)'
         });
         glyph.className = 'hero-math-symbol';
         container.appendChild(glyph);
@@ -1140,27 +1140,27 @@ function applyHeroBackgroundTheme(container, themeName, options = {}) {
             createAndAnimateParticleField(container, { count: 16, opacity: 0.2, duration: 8.8 });
             break;
         case 'math-symbol-drift':
-            createAndAnimateMathSymbols(container, { count: 10, opacity: 0.12, duration: 11.5 });
-            createAndAnimateEquationGlyphs(container, { count: 5, opacity: 0.1, duration: 10, snippets: PHYSICS_EQUATION_SNIPPETS });
+            createAndAnimateMathSymbols(container, { count: 11, opacity: 0.18, duration: 11.5 });
+            createAndAnimateEquationGlyphs(container, { count: 6, opacity: 0.14, duration: 10.6, snippets: PHYSICS_EQUATION_SNIPPETS, fontMin: 1.1, fontMax: 1.7 });
             createAndAnimateSplineCurves(container, { count: 3, size: 120, opacity: 0.1, scale: 1.05, duration: 6.8, rotationDuration: 11 });
             break;
         case 'physics-equations':
             createAndAnimateEquationGlyphs(container, {
                 count: 10,
-                opacity: 0.22,
+                opacity: 0.28,
                 duration: 12.5,
                 snippets: PHYSICS_EQUATION_SNIPPETS,
-                fontMin: 1.2,
-                fontMax: 1.95,
+                fontMin: 1.35,
+                fontMax: 2.15,
                 color: 'color-mix(in srgb, var(--color-primary-lighter) 82%, white)',
-                xDrift: 42,
-                yDrift: 28,
+                xDrift: 48,
+                yDrift: 32,
                 letterSpacing: '0.03em',
-                textShadow: '0 0 22px color-mix(in srgb, var(--color-primary-light) 40%, transparent)'
+                textShadow: '0 0 28px color-mix(in srgb, var(--color-primary-light) 50%, transparent)'
             });
             createAndAnimateMathSymbols(container, {
-                count: 10,
-                opacity: 0.16,
+                count: 12,
+                opacity: 0.2,
                 duration: 11.5,
                 symbols: ['\\(\\nabla\\)', '\\(\\partial\\)', '\\(\\gamma\\)', '\\(\\psi\\)', '\\(\\Lambda\\)', '\\(\\mu_0\\)', '\\(\\varepsilon_0\\)', '\\(\\pi\\)']
             });
@@ -1169,18 +1169,19 @@ function applyHeroBackgroundTheme(container, themeName, options = {}) {
             break;
         case 'phase-portrait':
             createAndAnimateSplineCurves(container, { count: 6, size: 132, opacity: 0.12, scale: 1.08, duration: 6.6, rotationDuration: 12 });
-            createAndAnimateEquationGlyphs(container, { count: 6, opacity: 0.08, duration: 10.8 });
+            createAndAnimateEquationGlyphs(container, { count: 6, opacity: 0.12, duration: 10.8, fontMin: 1.05, fontMax: 1.6 });
             createAndAnimateParticleField(container, { count: 10, opacity: 0.16, duration: 7.8 });
             break;
         case 'nebula-equations':
             createAndAnimateGlowOrbs(container, { count: 8, opacity: 0.12, minSize: 130, maxSize: 280, duration: 9.5, drift: 52 });
             createAndAnimateEquationGlyphs(container, {
                 count: 7,
-                opacity: 0.1,
+                opacity: 0.14,
                 duration: 11.4,
                 snippets: PHYSICS_EQUATION_SNIPPETS,
-                fontMin: 1,
-                fontMax: 1.6
+                fontMin: 1.1,
+                fontMax: 1.75,
+                textShadow: '0 0 22px color-mix(in srgb, var(--color-primary-light) 42%, transparent)'
             });
             createAndAnimateParticleField(container, { count: 22, opacity: 0.26, duration: 9 });
             break;

@@ -177,11 +177,18 @@
   }
 
   .morphing-shapes[data-hero-theme="physics-equations"] .hero-equation-glyph {
-    filter: drop-shadow(0 0 12px color-mix(in srgb, var(--color-primary-light) 32%, transparent));
+    filter: drop-shadow(0 0 18px color-mix(in srgb, var(--color-primary-light) 44%, transparent));
   }
 
   .morphing-shapes[data-hero-theme="physics-equations"] .hero-math-symbol {
-    filter: drop-shadow(0 0 10px color-mix(in srgb, var(--color-third-light) 24%, transparent));
+    filter: drop-shadow(0 0 16px color-mix(in srgb, var(--color-third-light) 34%, transparent));
+  }
+
+  .morphing-shapes[data-hero-theme="equation-drift"] .hero-equation-glyph,
+  .morphing-shapes[data-hero-theme="math-symbol-drift"] .hero-equation-glyph,
+  .morphing-shapes[data-hero-theme="math-symbol-drift"] .hero-math-symbol,
+  .morphing-shapes[data-hero-theme="nebula-equations"] .hero-equation-glyph {
+    filter: drop-shadow(0 0 14px color-mix(in srgb, var(--color-primary-light) 36%, transparent));
   }
 
   .morphing-shapes[data-hero-theme="kdv-soliton"] .hero-soliton-wave,
