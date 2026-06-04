@@ -170,17 +170,22 @@
     mix-blend-mode: screen;
   }
 
-  .morphing-shapes[data-hero-theme="physics-equations"] .hero-math-symbol,
-  .morphing-shapes[data-hero-theme="physics-equations"] .hero-equation-glyph,
-  .morphing-shapes[data-hero-theme="physics-equations"] .hero-particle {
+  .morphing-shapes[data-hero-theme="fundamental-physics"] .hero-math-symbol,
+  .morphing-shapes[data-hero-theme="fundamental-physics"] .hero-equation-glyph,
+  .morphing-shapes[data-hero-theme="fundamental-physics"] .hero-particle,
+  .morphing-shapes[data-hero-theme="dispersive-pdes"] .hero-math-symbol,
+  .morphing-shapes[data-hero-theme="dispersive-pdes"] .hero-equation-glyph,
+  .morphing-shapes[data-hero-theme="dispersive-pdes"] .hero-particle {
     mix-blend-mode: screen;
   }
 
-  .morphing-shapes[data-hero-theme="physics-equations"] .hero-equation-glyph {
+  .morphing-shapes[data-hero-theme="fundamental-physics"] .hero-equation-glyph,
+  .morphing-shapes[data-hero-theme="dispersive-pdes"] .hero-equation-glyph {
     filter: drop-shadow(0 0 18px color-mix(in srgb, var(--color-primary-light) 44%, transparent));
   }
 
-  .morphing-shapes[data-hero-theme="physics-equations"] .hero-math-symbol {
+  .morphing-shapes[data-hero-theme="fundamental-physics"] .hero-math-symbol,
+  .morphing-shapes[data-hero-theme="dispersive-pdes"] .hero-math-symbol {
     filter: drop-shadow(0 0 16px color-mix(in srgb, var(--color-third-light) 34%, transparent));
   }
 

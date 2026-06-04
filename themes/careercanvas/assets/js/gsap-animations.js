@@ -22,8 +22,10 @@ const HERO_BACKGROUND_THEMES = [
     'kdv-soliton',
     'black-hole-lensing',
     'math-symbol-drift',
-    'physics-equations',
-    'physics-equations',
+    'fundamental-physics',
+    'fundamental-physics',
+    'dispersive-pdes',
+    'dispersive-pdes',
     'phase-portrait',
     'nebula-equations',
     'resonance-rings',
@@ -34,13 +36,17 @@ const HERO_BACKGROUND_THEMES = [
     'spiral-spectra'
 ];
 
-const PHYSICS_EQUATION_SNIPPETS = [
+const FUNDAMENTAL_PHYSICS_SNIPPETS = [
     '\\(R_{\\mu\\nu} - \\frac{1}{2} R g_{\\mu\\nu} + \\Lambda g_{\\mu\\nu} = 8\\pi T_{\\mu\\nu}\\)',
     '\\(\\nabla \\cdot \\mathbf{E} = \\rho / \\varepsilon_0\\)',
     '\\(\\nabla \\times \\mathbf{B} - \\mu_0 \\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t} = \\mu_0 \\mathbf{J}\\)',
     '\\((i\\gamma^\\mu \\partial_\\mu - m)\\psi = 0\\)',
     '\\(\\nabla \\cdot \\mathbf{B} = 0\\)',
-    '\\(\\nabla \\times \\mathbf{E} = -\\frac{\\partial \\mathbf{B}}{\\partial t}\\)',
+    '\\(\\nabla \\times \\mathbf{E} = -\\frac{\\partial \\mathbf{B}}{\\partial t}\\)'
+];
+
+const DISPERSIVE_PDE_SNIPPETS = [
+    '\\(u_t + 6u u_x + u_{xxx} = 0\\)',
     '\\(u_t + u u_x - u_{t x x} = 0\\)',
     '\\(i u_t + u_{x x} + \\beta |u|^2 u = 0\\)'
 ];
@@ -1119,7 +1125,7 @@ function applyHeroBackgroundTheme(container, themeName, options = {}) {
                 count: 9,
                 opacity: 0.16,
                 duration: 11.5,
-                snippets: [...PHYSICS_EQUATION_SNIPPETS, '\\(u_t + 6u u_x + u_{xxx} = 0\\)'],
+                snippets: DISPERSIVE_PDE_SNIPPETS,
                 fontMin: 1.05,
                 fontMax: 1.7,
                 xDrift: 78,
@@ -1141,15 +1147,15 @@ function applyHeroBackgroundTheme(container, themeName, options = {}) {
             break;
         case 'math-symbol-drift':
             createAndAnimateMathSymbols(container, { count: 11, opacity: 0.18, duration: 11.5 });
-            createAndAnimateEquationGlyphs(container, { count: 6, opacity: 0.14, duration: 10.6, snippets: PHYSICS_EQUATION_SNIPPETS, fontMin: 1.1, fontMax: 1.7 });
+            createAndAnimateEquationGlyphs(container, { count: 5, opacity: 0.12, duration: 10.6, snippets: DISPERSIVE_PDE_SNIPPETS, fontMin: 1.1, fontMax: 1.65 });
             createAndAnimateSplineCurves(container, { count: 3, size: 120, opacity: 0.1, scale: 1.05, duration: 6.8, rotationDuration: 11 });
             break;
-        case 'physics-equations':
+        case 'fundamental-physics':
             createAndAnimateEquationGlyphs(container, {
-                count: 10,
+                count: 8,
                 opacity: 0.28,
                 duration: 12.5,
-                snippets: PHYSICS_EQUATION_SNIPPETS,
+                snippets: FUNDAMENTAL_PHYSICS_SNIPPETS,
                 fontMin: 1.35,
                 fontMax: 2.15,
                 color: 'color-mix(in srgb, var(--color-primary-lighter) 82%, white)',
@@ -1159,13 +1165,36 @@ function applyHeroBackgroundTheme(container, themeName, options = {}) {
                 textShadow: '0 0 28px color-mix(in srgb, var(--color-primary-light) 50%, transparent)'
             });
             createAndAnimateMathSymbols(container, {
-                count: 12,
+                count: 10,
                 opacity: 0.2,
                 duration: 11.5,
                 symbols: ['\\(\\nabla\\)', '\\(\\partial\\)', '\\(\\gamma\\)', '\\(\\psi\\)', '\\(\\Lambda\\)', '\\(\\mu_0\\)', '\\(\\varepsilon_0\\)', '\\(\\pi\\)']
             });
             createAndAnimateSolitonWave(container, { count: 2, opacity: 0.12, duration: 10.2, topStart: 58, topGap: 18, widthBase: 300, widthStep: 60, heightBase: 42, heightStep: 6, blur: 10, glowStrength: 58 });
             createAndAnimateParticleField(container, { count: 12, opacity: 0.18, duration: 8.4 });
+            break;
+        case 'dispersive-pdes':
+            createAndAnimateEquationGlyphs(container, {
+                count: 7,
+                opacity: 0.26,
+                duration: 12.2,
+                snippets: DISPERSIVE_PDE_SNIPPETS,
+                fontMin: 1.35,
+                fontMax: 2.05,
+                color: 'color-mix(in srgb, var(--color-primary-lighter) 84%, white)',
+                xDrift: 92,
+                yDrift: 64,
+                letterSpacing: '0.02em',
+                textShadow: '0 0 28px color-mix(in srgb, var(--color-primary-light) 48%, transparent)'
+            });
+            createAndAnimateMathSymbols(container, {
+                count: 8,
+                opacity: 0.18,
+                duration: 11.3,
+                symbols: ['\\(\\partial\\)', '\\(\\int\\)', '\\(\\nabla\\)', '\\(\\psi\\)', '\\(\\beta\\)', '\\(H[u]\\)', '\\(P^k(I_j)\\)']
+            });
+            createAndAnimateSolitonWave(container, { count: 3, opacity: 0.18, duration: 10, topStart: 50, topGap: 14, widthBase: 280, widthStep: 72, heightBase: 46, heightStep: 8, blur: 10, glowStrength: 62 });
+            createAndAnimateParticleField(container, { count: 10, opacity: 0.16, duration: 8.2 });
             break;
         case 'phase-portrait':
             createAndAnimateSplineCurves(container, { count: 6, size: 132, opacity: 0.12, scale: 1.08, duration: 6.6, rotationDuration: 12 });
@@ -1175,10 +1204,10 @@ function applyHeroBackgroundTheme(container, themeName, options = {}) {
         case 'nebula-equations':
             createAndAnimateGlowOrbs(container, { count: 8, opacity: 0.12, minSize: 130, maxSize: 280, duration: 9.5, drift: 52 });
             createAndAnimateEquationGlyphs(container, {
-                count: 7,
+                count: 6,
                 opacity: 0.14,
                 duration: 11.4,
-                snippets: PHYSICS_EQUATION_SNIPPETS,
+                snippets: FUNDAMENTAL_PHYSICS_SNIPPETS,
                 fontMin: 1.1,
                 fontMax: 1.75,
                 textShadow: '0 0 22px color-mix(in srgb, var(--color-primary-light) 42%, transparent)'
