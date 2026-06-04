@@ -760,10 +760,18 @@ function createAndAnimateEquationGlyphs(container, options = {}) {
         ...options
     };
 
-    const glyphs = Array.from({ length: config.count }, (_, index) => {
+    const uniqueSnippets = [...new Set(config.snippets)];
+    const shuffledSnippets = [...uniqueSnippets];
+    for (let index = shuffledSnippets.length - 1; index > 0; index -= 1) {
+        const randomIndex = Math.floor(Math.random() * (index + 1));
+        [shuffledSnippets[index], shuffledSnippets[randomIndex]] = [shuffledSnippets[randomIndex], shuffledSnippets[index]];
+    }
+    const selectedSnippets = shuffledSnippets.slice(0, Math.min(config.count, shuffledSnippets.length));
+
+    const glyphs = selectedSnippets.map((snippet) => {
         const glyph = document.createElement('div');
         const pos = Utils.randomPosition(8, 88);
-        glyph.innerHTML = config.snippets[index % config.snippets.length];
+        glyph.innerHTML = snippet;
         Object.assign(glyph.style, {
             position: 'absolute',
             left: `${pos.x}%`,
