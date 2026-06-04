@@ -104,10 +104,6 @@ The `CareerCanvas` theme in this repository has been heavily customized for my a
 - Stacked photo galleries for conferences and personal milestones
 - Custom contact, opportunity, and profile components
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to open an issue in this repository.
