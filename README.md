@@ -1,18 +1,18 @@
 # Personal Website
 
-This is my personal website built with Hugo, a fast and modern static site generator. The site features a clean, responsive design powered by Tailwind CSS and uses my own theme, CareerCanvas.
+This is my personal website built with Hugo. The site includes custom content, interactive hero animations, publication and preprint sections, research pages, conference galleries, and contact integration.
 
 ## 🚀 Features
 
 - Built with Hugo static site generator
-- Uses CareerCanvas theme (my own creation)
+- Uses a customized `CareerCanvas` theme bundled in this repository
 - Styled with Tailwind CSS
-- Responsive design with dark mode support
+- Responsive design
 - Typography plugin for better content formatting
 - Custom layouts and templates
-- Image galleries for project showcases
-- Multilingual support (English/French)
-- Interactive skills and experience sections
+- Image galleries and stacked photo previews
+- Interactive skills, experience, and research sections
+- GitHub Pages deployment workflow
 
 ## 🛠️ Prerequisites
 
@@ -85,29 +85,24 @@ For the contact form and Pexels backgrounds, set at build time: `HUGO_PARAMS_PEX
 
 ## 📁 Project Structure
 
-- `assets/` - Contains source files for CSS, JavaScript, and other assets
-- `content/` - Contains the content of your site
-- `static/` - Contains static files like images
-- `themes/careercanvas/` - Contains the CareerCanvas theme
-- `config.toml` - Main configuration file
-- `tailwind.config.js` - Tailwind CSS configuration
-
-## 🛠️ Technologies Used
-
-- [Hugo](https://gohugo.io/) - Static site generator
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) - Typography plugin for Tailwind CSS
-- `CareerCanvas` - Custom Hugo theme included in this repository
+- `.github/workflows/` - GitHub Actions workflow for Hugo deployment
+- `config/` - Hugo menu configuration and related defaults
+- `content/en/` - Main English site content used by the live website
+- `layouts/shortcodes/` - Project-level shortcode overrides
+- `static/` - Public files and images served directly by the site
+- `themes/careercanvas/` - Customized theme assets, layouts, CSS, and JavaScript
+- `config.toml` - Main site configuration, metadata, social links, and homepage settings
+- `package.json` - Local development scripts and frontend build dependencies
+- `tailwind.config.js` - Tailwind configuration used for site styling
 
 ## 👨‍💻 About the Theme
 
-The CareerCanvas theme is my own creation, designed specifically for technical and engineering portfolios. It features:
-- Modern, responsive design
-- Dark mode support
-- Interactive components
-- Image galleries
-- Multilingual support
-- Optimized for technical content
+The `CareerCanvas` theme in this repository has been heavily customized for my academic website. It includes:
+- Interactive hero animations and rotating profile images
+- Publication and preprint cards
+- Research page custom sections and soliton visualizations
+- Stacked photo galleries for conferences and personal milestones
+- Custom contact, opportunity, and profile components
 
 ## 📝 License
 
