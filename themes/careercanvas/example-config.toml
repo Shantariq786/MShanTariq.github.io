@@ -1,6 +1,6 @@
 # CareerCanvas theme – example config
 # Copy sections into your site config.toml and replace placeholders.
-# For running the site, see the Portfolio repo README: https://github.com/felipecordero/felipecordero.github.io
+# For running the site, see the main portfolio repository README.
 
 baseURL = "https://yoursite.com"
 languageCode = "en-us"

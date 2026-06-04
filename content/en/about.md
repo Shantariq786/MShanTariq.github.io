@@ -1,7 +1,7 @@
 ---
 title: "About"
 type: "homepage"
-featured_image: "/images/felipe-cordero-profile.jpeg"
+featured_image: "/images/shan.jpg"
 intro: >-
   I’m Muhammad Shan, a PhD candidate in Applied Mathematics and a physicist with a strong background in numerical analysis, scientific computing, and nonlinear partial differential equations. Currently, I am a Research Assistant in the <a href="https://www.umassd.edu/cas/math/people/graduate-assistants/" target="_blank" rel="noopener noreferrer"><strong>Department of Mathematics at the University of Massachusetts Dartmouth</strong></a>, where I work on structure-preserving numerical methods and high-order schemes for nonlinear dispersive systems. My research focuses on developing accurate numerical methods for nonlinear PDEs using the Discontinuous Galerkin framework. I have worked on the Korteweg-de Vries equation and coupled KdV systems, and I am broadly interested in advanced computational methods for challenging scientific problems.
 

@@ -1,5 +1,5 @@
 {
-  "name": "felipe-cordero-site",
+  "name": "m-shan-tariq-site",
   "version": "1.0.0",
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -87,14 +87,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/felipecordero/felipecordero.github.io.git"
+    "url": "git+https://github.com/Shantariq786/MShanTariq.github.io.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/felipecordero/felipecordero.github.io/issues"
+    "url": "https://github.com/Shantariq786/MShanTariq.github.io/issues"
   },
-  "homepage": "https://github.com/felipecordero/felipecordero.github.io#readme"
+  "homepage": "https://github.com/Shantariq786/MShanTariq.github.io#readme"
 }

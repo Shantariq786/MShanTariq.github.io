@@ -25,8 +25,8 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
 ```bash
-git clone --recurse-submodules https://github.com/felipecordero/felipecordero.github.io.git
-cd felipecordero.github.io
+git clone https://github.com/Shantariq786/MShanTariq.github.io.git
+cd MShanTariq.github.io
 ```
 
 2. Install npm dependencies:
@@ -97,7 +97,7 @@ For the contact form and Pexels backgrounds, set at build time: `HUGO_PARAMS_PEX
 - [Hugo](https://gohugo.io/) - Static site generator
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 - [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) - Typography plugin for Tailwind CSS
-- [CareerCanvas](https://github.com/felipecordero/careercanvas) - Custom Hugo theme
+- `CareerCanvas` - Custom Hugo theme included in this repository
 
 ## 👨‍💻 About the Theme
 
@@ -115,12 +115,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/felipecordero/felipecordero.github.io/issues).
+Contributions, issues, and feature requests are welcome! Feel free to open an issue in this repository.
 
 ## 📫 Contact
 
-For any questions or suggestions, please open an issue in the GitHub repository or visit [felipecordero.com](https://felipecordero.com).
+For any questions or suggestions, please open an issue in the GitHub repository or contact me through the website.
 
 ## 🚨 Important Note
 
-The built CSS file (`themes/careercanvas/static/css/main.css`) is managed by the theme submodule and should not be committed separately in this repository. If you need to update the CSS, please do so in the theme repository and then update the submodule here. 
+The built CSS file (`themes/careercanvas/static/css/main.css`) is generated from the theme assets. If you update the CSS source, rebuild it before publishing the site.
