@@ -747,8 +747,8 @@ function createAndAnimateEquationGlyphs(container, options = {}) {
         fontMin: 1.1,
         fontMax: 1.75,
         color: 'color-mix(in srgb, var(--color-primary-lighter) 82%, white)',
-        xDrift: 40,
-        yDrift: 28,
+        xDrift: 70,
+        yDrift: 48,
         letterSpacing: '0.04em',
         textShadow: '0 0 20px color-mix(in srgb, var(--color-primary-light) 38%, transparent)',
         ...options
@@ -790,7 +790,7 @@ function createAndAnimateEquationGlyphs(container, options = {}) {
                 ease: 'sine.inOut'
             })
             .to(glyph, {
-                rotation: `+=${Math.random() > 0.5 ? 10 : -10}`,
+                rotation: `+=${Math.random() > 0.5 ? 18 : -18}`,
                 duration: config.duration + 2,
                 ease: 'sine.inOut'
             }, 0);
@@ -848,13 +848,13 @@ function createAndAnimateMathSymbols(container, options = {}) {
         gsap.timeline({ repeat: -1, yoyo: true, delay: index * 0.3 })
             .to(glyph, {
                 opacity: config.opacity,
-                x: (Math.random() - 0.5) * 55,
-                y: (Math.random() - 0.5) * 35,
+                x: (Math.random() - 0.5) * 82,
+                y: (Math.random() - 0.5) * 58,
                 duration: config.duration + Math.random() * 2,
                 ease: 'sine.inOut'
             })
             .to(glyph, {
-                rotation: `+=${Math.random() > 0.5 ? 14 : -14}`,
+                rotation: `+=${Math.random() > 0.5 ? 24 : -24}`,
                 duration: config.duration + 1.5,
                 ease: 'sine.inOut'
             }, 0);
@@ -1122,8 +1122,8 @@ function applyHeroBackgroundTheme(container, themeName, options = {}) {
                 snippets: [...PHYSICS_EQUATION_SNIPPETS, '\\(u_t + 6u u_x + u_{xxx} = 0\\)'],
                 fontMin: 1.05,
                 fontMax: 1.7,
-                xDrift: 44,
-                yDrift: 30,
+                xDrift: 78,
+                yDrift: 54,
                 textShadow: '0 0 20px color-mix(in srgb, var(--color-primary-light) 34%, transparent)'
             });
             createAndAnimateSplineCurves(container, { count: 4, size: 128, opacity: 0.11, scale: 1.06, duration: 6.4, rotationDuration: 11 });
@@ -1153,8 +1153,8 @@ function applyHeroBackgroundTheme(container, themeName, options = {}) {
                 fontMin: 1.35,
                 fontMax: 2.15,
                 color: 'color-mix(in srgb, var(--color-primary-lighter) 82%, white)',
-                xDrift: 48,
-                yDrift: 32,
+                xDrift: 96,
+                yDrift: 68,
                 letterSpacing: '0.03em',
                 textShadow: '0 0 28px color-mix(in srgb, var(--color-primary-light) 50%, transparent)'
             });
