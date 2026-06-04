@@ -40,7 +40,9 @@ const PHYSICS_EQUATION_SNIPPETS = [
     '\\(\\nabla \\times \\mathbf{B} - \\mu_0 \\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t} = \\mu_0 \\mathbf{J}\\)',
     '\\((i\\gamma^\\mu \\partial_\\mu - m)\\psi = 0\\)',
     '\\(\\nabla \\cdot \\mathbf{B} = 0\\)',
-    '\\(\\nabla \\times \\mathbf{E} = -\\frac{\\partial \\mathbf{B}}{\\partial t}\\)'
+    '\\(\\nabla \\times \\mathbf{E} = -\\frac{\\partial \\mathbf{B}}{\\partial t}\\)',
+    '\\(u_t + u u_x - u_{t x x} = 0\\)',
+    '\\(i u_t + u_{x x} + \\beta |u|^2 u = 0\\)'
 ];
 
 function typesetHeroMath(elements, attempt = 0) {
@@ -1113,7 +1115,17 @@ function applyHeroBackgroundTheme(container, themeName, options = {}) {
             createAndAnimateParticleField(container, { count: 14, opacity: 0.24, duration: 8.2 });
             break;
         case 'equation-drift':
-            createAndAnimateEquationGlyphs(container, { count: 7, opacity: 0.13, duration: 11, snippets: [...PHYSICS_EQUATION_SNIPPETS, '\\(u_t + 6u u_x + u_{xxx} = 0\\)'] });
+            createAndAnimateEquationGlyphs(container, {
+                count: 9,
+                opacity: 0.16,
+                duration: 11.5,
+                snippets: [...PHYSICS_EQUATION_SNIPPETS, '\\(u_t + 6u u_x + u_{xxx} = 0\\)'],
+                fontMin: 1.05,
+                fontMax: 1.7,
+                xDrift: 44,
+                yDrift: 30,
+                textShadow: '0 0 20px color-mix(in srgb, var(--color-primary-light) 34%, transparent)'
+            });
             createAndAnimateSplineCurves(container, { count: 4, size: 128, opacity: 0.11, scale: 1.06, duration: 6.4, rotationDuration: 11 });
             createAndAnimateDiagonalLines(container, { count: 4, opacity: 0.12, scaleX: 4.4, duration: 4.6, rotationDuration: 10 });
             break;
@@ -1134,15 +1146,15 @@ function applyHeroBackgroundTheme(container, themeName, options = {}) {
             break;
         case 'physics-equations':
             createAndAnimateEquationGlyphs(container, {
-                count: 8,
-                opacity: 0.2,
-                duration: 12,
+                count: 10,
+                opacity: 0.22,
+                duration: 12.5,
                 snippets: PHYSICS_EQUATION_SNIPPETS,
-                fontMin: 1.05,
-                fontMax: 1.75,
+                fontMin: 1.2,
+                fontMax: 1.95,
                 color: 'color-mix(in srgb, var(--color-primary-lighter) 82%, white)',
-                xDrift: 34,
-                yDrift: 22,
+                xDrift: 42,
+                yDrift: 28,
                 letterSpacing: '0.03em',
                 textShadow: '0 0 22px color-mix(in srgb, var(--color-primary-light) 40%, transparent)'
             });
@@ -1162,7 +1174,14 @@ function applyHeroBackgroundTheme(container, themeName, options = {}) {
             break;
         case 'nebula-equations':
             createAndAnimateGlowOrbs(container, { count: 8, opacity: 0.12, minSize: 130, maxSize: 280, duration: 9.5, drift: 52 });
-            createAndAnimateEquationGlyphs(container, { count: 6, opacity: 0.08, duration: 11.2 });
+            createAndAnimateEquationGlyphs(container, {
+                count: 7,
+                opacity: 0.1,
+                duration: 11.4,
+                snippets: PHYSICS_EQUATION_SNIPPETS,
+                fontMin: 1,
+                fontMax: 1.6
+            });
             createAndAnimateParticleField(container, { count: 22, opacity: 0.26, duration: 9 });
             break;
         case 'resonance-rings':
